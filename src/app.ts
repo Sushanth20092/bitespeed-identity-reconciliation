@@ -7,7 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Register /identify endpoint
+app.get("/", (req, res) => {
+  res.send("BiteSpeed Identity Reconciliation API is running 🚀");
+});
+
 app.use("/identify", identifyRoutes);
 
 export default app;
